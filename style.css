@@ -8,7 +8,6 @@
 
 body {
   max-width: 100vw;
-  background-color: gray;
   overflow-x: hidden;
 }
 
@@ -29,11 +28,12 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.75rem 1rem 0.75rem;
+  padding: 0.75rem 1.5rem 0 0.75rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
+  transition: 0.25s;
 }
 
 .menu-icon {
@@ -50,6 +50,7 @@ svg {
   background: black;
   padding-top: 100px;
   transition: transform 0.5s ease-out;
+  overflow-y: auto;
 }
 
 .nav-menu-options li {
@@ -66,6 +67,91 @@ svg {
   transform: translateX(0);
 }
 
+.bg-black {
+  background: black;
+}
+
+.bg-image {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 500px;
+  background-image: url("/images.jpeg");
+  background-color: #ccccccd0;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 75px 75px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.bg-image::after {
+  content: "";
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(5, 8, 6, 0.7);
+  border-radius: 0 0 75px 75px;
+}
+
+.bg-image div {
+  width: 100vw;
+  color: white;
+  z-index: 5;
+  position: absolute;
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+.bg-image div h1 {
+  font-size: 3rem;
+  font-family: Arial;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-top: 6rem;
+}
+
+.bg-image div p,
+.phrase-title + p {
+  line-height: 200%;
+  font-size: 1rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.bg-image div div {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.bg-image div button {
+  padding: 1rem 3rem;
+  outline: none;
+  border: 1.5px solid #e09a29;
+  background: transparent;
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
+.bg-image div button a {
+  color: #e09a29;
+  font-size: 1.2rem;
+}
+
+.container-section {
+  padding: 40px 20px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.phrase-title {
+  font-size: 3rem;
+  font-family: Arial;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  font-weight: lighter;
+}
 .hidden {
   display: none;
 }
@@ -86,7 +172,7 @@ svg {
 
 @media only screen and (min-width: 969px) {
   .header {
-    padding: 2rem;
+    padding: 0.25rem;
   }
   .logo-digital-business {
     width: 150px;
