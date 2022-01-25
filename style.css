@@ -172,7 +172,7 @@ svg {
 
 @media only screen and (min-width: 969px) {
   .header {
-    padding: 0.25rem;
+    padding: 2rem 0 1.5rem 2.5rem;
   }
   .logo-digital-business {
     width: 150px;
@@ -192,10 +192,11 @@ svg {
     text-align: normal;
     padding-right: 0rem;
     font-size: 1.4rem;
+    margin-right: 3rem;
   }
   .nav-menu-options li {
     text-align: normal;
-    margin: 0.8rem 1.5rem;
+    margin: 0.8rem 1.75rem;
     padding-right: 0rem;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -205,5 +206,40 @@ svg {
   .nav-menu-options li:hover {
     cursor: pointer;
     border-bottom: 1px solid yellow;
+  }
+
+  .bg-image div {
+    width: 55vw;
+  }
+
+  .bg-image div h1,
+  .bg-image div p {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .bg-image div div {
+    place-items: start;
+  }
+
+  .socialMedia {
+    width: 60px;
+    height: 235px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0px;
+    bottom: 40px;
+    left: 92%;
+
+    /* position: fixed;
+    bottom: 20px;
+    left: 1rem;
+    background: rgb(250, 181, 2);
+    width: 80vw;
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    border-radius: 50px;
+    box-shadow: 0 0 3px 0 rgb(86, 86, 86); */
   }
 }
